@@ -1,0 +1,19 @@
+{
+  "name": "purescript-cycle",
+  "description": "Purescript bindings for cycle.js",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Konstantin Zudov <co@zudov.me>",
+  "license": "BSD3",
+  "dependencies": {
+    "@cycle/core": "6.0.0-rc2",
+    "@cycle/dom": "8.0.0-rc4",
+    "rx": "^4.0.7",
+    "virtual-dom": "^2.1.1"
+  }
+}

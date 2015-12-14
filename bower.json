@@ -1,0 +1,16 @@
+{
+  "name": "purescript-cycle",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-rx": "~0.8.1",
+    "purescript-halogen": "~0.5.8"
+  }
+}
