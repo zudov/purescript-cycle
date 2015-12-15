@@ -13,7 +13,7 @@ import Halogen.Internal.VirtualDOM (VTree())
 
 main = run app drivers
 
-app :: { dom :: DomDriver } -> { dom :: Observable VTree }
+app :: { dom :: DomInput } -> { dom :: Observable VTree }
 app requests = { dom: map (renderHTML <<< render) count }
   where
     clicks = requests.dom # select "#count" # events "click"

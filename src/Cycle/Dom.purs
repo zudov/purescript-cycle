@@ -17,11 +17,12 @@ type CycleHTML = HTML Void (Identity Unit)
 renderHTML :: CycleHTML -> VTree
 renderHTML = Renderer.renderHTML (pure <<< runIdentity)
 
-foreign import data DomDriver :: *
+type DomDriver = VTree -> DomInput
 
 foreign import makeDomDriver :: String -> DomDriver
 
-foreign import data Selection :: *
+foreign import data DomInput     :: *
+foreign import data DomSelection :: *
 
-foreign import select :: String -> DomDriver -> Selection
-foreign import events :: String -> Selection -> Observable Event
+foreign import select :: String -> DomInput -> DomSelection
+foreign import events :: String -> DomSelection -> Observable Event
